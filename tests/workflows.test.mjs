@@ -14,6 +14,10 @@ test('CI tests pull requests without write, deployment or target-event privilege
   for (const command of ['pnpm check','pnpm test','pnpm test:e2e','pnpm build','--frozen-lockfile']) {
     assert.ok(commands.includes(command),`Missing CI gate: ${command}`);
   }
+  const steps=ci.jobs.test.steps;
+  const setupNode=steps.find(s=>s.uses?.startsWith('actions/setup-node@'));
+  assert.equal(setupNode.with['package-manager-cache'],false);
+  assert.ok(steps.findIndex(s=>(s.run||'').includes('npm install --global pnpm@')) < steps.findIndex(s=>(s.run||'').includes('pnpm install --frozen-lockfile')));
 });
 test('Pages builds only after the same reusable CI and deploys only after artifact upload', async () => {
   const pages = await load('pages');
