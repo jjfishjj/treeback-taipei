@@ -1,0 +1,5 @@
+packages:
+  - '.'
+# No dependency needs an install-time lifecycle script.
+# Playwright browsers are installed explicitly with playwright install.
+allowBuilds: {}

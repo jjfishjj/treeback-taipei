@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173c32">
+  <meta name="description" content="TreeBack 樹蔭公平情境實驗室：動態調整權重，比較臺北12區模擬分數，探索大同與萬華48小時公民盤點方案。非官方評分或植樹核定。">
+  <title>TreeBack｜樹蔭公平情境實驗室</title>
+  <link rel="icon" href="./logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <header class="header">
+    <a class="brand" href="#dashboard" aria-label="TreeBack 首頁"><img src="./logo.svg" width="36" height="36" alt=""><span>TreeBack<span class="brand-sub">台北見縫插樹</span></span></a>
+    <nav aria-label="主導覽"><button class="nav-link active" data-view="dashboard">樹蔭公平實驗室</button><button class="nav-link" data-view="fieldwork">48h 街區行動</button><button class="nav-link" data-view="sources">資料與方法</button></nav>
+    <span class="header-tag"><span class="live-dot"></span> CivicTech Prototype</span>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div><p class="eyebrow">URBAN SHADE · TAIPEI</p><h1>把樹蔭，還給日常<span class="title-dot">。</span></h1><p class="hero-copy">不只計算種了幾棵，更看見樹蔭該回到哪裡。<br>用公開的方法，探索城市的補植優先序。</p></div>
+      <div class="hero-numbers" aria-label="原型範圍"><div><strong>12</strong><span>行政區情境</span></div><div><strong>02</strong><span>先導盤點區</span></div><div><strong>48<span>h</span></strong><span>原型行動計畫</span></div></div>
+    </section>
+    <aside class="disclaimer"><span class="warning-symbol" aria-hidden="true">!</span><p><strong>這是模擬，不是城市現況排名。</strong>所有 C／H／P／V 輸入及 24% 樹冠目標均為情境假設。TreeBack TES 非官方 Tree Equity Score；候選線索不是實測空穴或核准植樹點。</p><button data-view="sources" class="text-button">了解資料界線 ↗</button></aside>
+    <section id="dashboard-view" class="view"></section>
+    <section id="fieldwork-view" class="view" hidden></section>
+    <section id="sources-view" class="view" hidden></section>
+  </main>
+  <footer><span><strong>TreeBack</strong> 公民參與 × 可追溯資料 × 城市樹蔭</span><span>情境版本 2026.10 · 不取代市府審查</span></footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript><p>請啟用 JavaScript 使用權重計算。所有原型分數均為假設情境，不是官方評分。</p></noscript>
+  <script type="module" src="./app.mjs"></script>
+</body>
+</html>
